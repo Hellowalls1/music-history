@@ -93,4 +93,25 @@
 --8)
 --INSERT INTO ALBUM (Title, ReleaseDate, AlbumLength, Label, ArtistId, GenreId) VALUES ('Billie Eilish Record', 2017, 2198, 'Her Label', 28, 4);
 
-INSERT INTO SONG (
+--9)
+--INSERT INTO SONG (Title, SongLength, ReleaseDate, GenreId, ArtistId, AlbumId) VALUES ('Good Guys', 61, '12/25/2017', 4, 28, 23);
+--INSERT INTO SONG (Title, SongLength, ReleaseDate, GenreId, ArtistId, AlbumId) VALUES ('Bad Guys', 61, '12/25/2017', 4, 28, 23);
+
+
+--10)
+--Select
+--	song.Title,
+--	album.Title,
+--	artist.ArtistName
+--From Song song
+--JOIN Artist artist ON artist.Id = song.ArtistId
+--JOIN Album album ON album.Id = song.AlbumId
+--WHERE artist.ArtistName = 'Billie Eilish';
+
+--11)
+--Select
+--	album.Title AS 'Album', --defining the column?
+--	Count(song.Id) AS 'Number of Songs'  --defining the column?
+--From Album album
+--LEFT JOIN Song song ON album.Id = song.AlbumId
+--GROUP BY (album.Title);
